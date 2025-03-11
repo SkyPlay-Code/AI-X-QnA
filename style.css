@@ -57,8 +57,6 @@ strong {
   color: #fff;
   border: none;
   cursor: pointer;
-  display: block;
-  margin: auto;
 }
 
 .button:hover::before {
@@ -86,10 +84,4 @@ strong {
     rgba(99, 88, 238, 1) 94.3%
   );
   transition: all 0.475s;
-}
-
-@media (max-width: 600px) {
-  .button {
-    width: 90%;
-  }
 }
