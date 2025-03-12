@@ -23,6 +23,13 @@
 </head>
 <body lang="en-IN" dir="ltr"><h1 class="western" align="center" style="background: transparent; page-break-after: avoid">
 <font face="Calibri, sans-serif">Download the PDF version</font></h1>
+
+<div id="preloader">
+    <div class="spinner">
+        <div class="spinnerin"></div>
+    </div>
+</div>
+
 <button class="button" onclick="downloadPDF()">
     <span class="button-content">Download PDF</span>
 </button>
@@ -3165,6 +3172,15 @@ detection to reduce false alarms.</font></p>
 <br/>
 
 </p>
+<script>
+	window.addEventListener("load", function() {
+    let preloader = document.getElementById("preloader");
+    preloader.classList.add("fade-out"); // Adds fade effect
+    setTimeout(() => {
+        preloader.style.display = "none"; // Hides it completely
+    }, 500); // Matches the CSS transition time
+});
+</script>
 </body>
 <script>
     function downloadPDF() {
