@@ -7,15 +7,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="preloader">
+      <div class="spinner">
+          <div class="spinnerin"></div>
+      </div>
+    </div>
+
     <h1>Download PDF</h1>
 
-    <button class="btn-12" onclick="downloadPDF()"><span>Button</span></button>
+    <button class="btn-12" onclick="downloadPDF()"><span>Click Here</span></button>
 
   
     <script>
         function downloadPDF() {
             window.location.href = "https://cdnbbsr.s3waas.gov.in/s3kv01edb5f385049e35efd27c9a97d11f/uploads/2024/05/2024050430.pdf";
         }
+    </script>
+    <script>
+      window.addEventListener("load", function() {
+        let preloader = document.getElementById("preloader");
+        preloader.classList.add("fade-out"); // Adds fade effect
+        setTimeout(() => {
+            preloader.style.display = "none"; // Hides it completely
+        }, 500); // Matches the CSS transition time
+    });
     </script>
   </body>
 </html>
